@@ -19,15 +19,15 @@ docker run --rm fullcycle-challenge
 
 ## Imagem no Docker Hub
 
-Publique a imagem com o comando abaixo (substitua `<seu-usuario>`):
+Publique a imagem com o comando abaixo:
 
 ```bash
-docker tag fullcycle-challenge <seu-usuario>/fullcycle:latest
-docker push <seu-usuario>/fullcycle:latest
+docker tag fullcycle-challenge julianepires/fullcycle:latest
+docker push julianepires/fullcycle:latest
 ```
 
 Execução esperada pelo avaliador:
 
 ```bash
-docker run <seu-usuario>/fullcycle:latest
+docker run julianepires/fullcycle:latest
 ```
