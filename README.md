@@ -9,7 +9,7 @@ sequenceDiagram
     participant Runtime as scratch image
     participant App as fullcycle binary
 
-    Docker->>Builder: go build -ldflags='-s -w' -trimpath
+    Docker->>Builder: go build -o fullcycle -ldflags='-s -w' -trimpath
     Builder-->>Docker: fullcycle
     Docker->>Runtime: COPY fullcycle /fullcycle
     Docker->>App: ENTRYPOINT /fullcycle
