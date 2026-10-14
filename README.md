@@ -11,7 +11,7 @@ sequenceDiagram
 
     Docker->>Builder: go build -o fullcycle -ldflags='-s -w' -trimpath
     Builder-->>Docker: fullcycle
-    Docker->>Runtime: COPY fullcycle /fullcycle
+    Docker->>Runtime: COPY --from=builder /app/fullcycle /fullcycle
     Docker->>App: ENTRYPOINT /fullcycle
     App-->>Docker: Full Cycle Rocks!!
 ```
